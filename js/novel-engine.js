@@ -89,7 +89,7 @@ const NovelEngine = (() => {
                             }
                         }
                     });
-                }, { threshold: 0.15 });
+                }, { threshold: 0.1 });
 
                 _observer.observe(overlay);
             } else {
