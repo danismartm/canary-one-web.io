@@ -86,48 +86,48 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: clamp(100px, 12vw, 170px);
+    width: clamp(70px, 9vw, 130px);
     aspect-ratio: 5 / 7;
     /* Standard card ratio */
-    margin-left: calc(clamp(100px, 12vw, 170px) / -2);
-    margin-top: calc((clamp(100px, 12vw, 170px) * 1.4) / -2);
-    border-radius: 12px;
+    margin-left: calc(clamp(70px, 9vw, 130px) / -2);
+    margin-top: calc((clamp(70px, 9vw, 130px) * 1.4) / -2);
+    border-radius: 10px;
     transform-style: preserve-3d;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     /* The individual cards will be spaced out by Javascript, but we can hardcode for 6 cards: */
 }
 
 /* Hardcode offsets for 8 cards (360deg / 8 = 45deg each) */
 .carousel-card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(45vw);
+    transform: rotateY(0deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(2) {
-    transform: rotateY(45deg) translateZ(45vw);
+    transform: rotateY(45deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(3) {
-    transform: rotateY(90deg) translateZ(45vw);
+    transform: rotateY(90deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(4) {
-    transform: rotateY(135deg) translateZ(45vw);
+    transform: rotateY(135deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(5) {
-    transform: rotateY(180deg) translateZ(45vw);
+    transform: rotateY(180deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(6) {
-    transform: rotateY(225deg) translateZ(45vw);
+    transform: rotateY(225deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(7) {
-    transform: rotateY(270deg) translateZ(45vw);
+    transform: rotateY(270deg) translateZ(40vw);
 }
 
 .carousel-card:nth-child(8) {
-    transform: rotateY(315deg) translateZ(45vw);
+    transform: rotateY(315deg) translateZ(40vw);
 }
 
 
