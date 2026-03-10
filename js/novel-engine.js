@@ -60,6 +60,8 @@ const NovelEngine = (() => {
         choicesEl = document.getElementById('novel-choices');
     }
 
+    let _observer = null;
+
     /* ── Init: listen for page renders ── */
     function init() {
         document.addEventListener('keydown', handleKey);
@@ -70,7 +72,29 @@ const NovelEngine = (() => {
             if (!overlay) return;
 
             const node = detail.pageId === 'landing' ? 'root' : 'return';
-            showNode(node, detail.pageId !== 'landing');
+
+            if (_observer) {
+                _observer.disconnect();
+                _observer = null;
+            }
+
+            if (window.IntersectionObserver) {
+                _observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            showNode(node, detail.pageId !== 'landing');
+                            if (_observer) {
+                                _observer.disconnect();
+                                _observer = null;
+                            }
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                _observer.observe(overlay);
+            } else {
+                showNode(node, detail.pageId !== 'landing');
+            }
         });
     }
 
