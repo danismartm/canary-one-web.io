@@ -5,12 +5,46 @@
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
 
-    <!-- Floating cards (3D tilt targets) -->
-    <div class="floating-cards">
-        <div class="fcard fcard-1"><img src="assets/card_guanche.png" alt="Carta Guanche" /></div>
-        <div class="fcard fcard-2"><img src="assets/card_back.png" alt="Dorso carta" /></div>
-        <div class="fcard fcard-3"><img src="assets/card_teide.png" alt="Carta Teide" /></div>
-        <div class="fcard fcard-4"><img src="assets/card_back.png" alt="Dorso carta" /></div>
+    <!-- 3D Card Carousel -->
+    <div class="hero-carousel" aria-hidden="true">
+        <div class="carousel-scene">
+            <div class="carousel-ring">
+                <!-- Card 1 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/card_guanche.png" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/card_teide.png" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/card_back.png"
+                            style="filter: hue-rotate(100deg) brightness(0.9);" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/islands_map.png"
+                            style="object-fit:cover;height:100%;border-radius:12px;" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+                <!-- Card 5 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/card_back.png"
+                            style="filter: hue-rotate(200deg) brightness(0.85);" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+                <!-- Card 6 -->
+                <div class="carousel-card">
+                    <div class="carousel-front"><img src="assets/card_guanche.png"
+                            style="filter: saturate(1.5) hue-rotate(320deg);" alt="" /></div>
+                    <div class="carousel-back"><img src="assets/card_back.png" alt="" /></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="hero-content">

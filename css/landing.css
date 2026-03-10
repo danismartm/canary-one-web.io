@@ -40,93 +40,121 @@
             rgba(var(--navy-rgb), 1) 100%);
 }
 
-/* ── Floating Cards ── */
-.floating-cards {
+/* ── 3D Rotating Carousel ── */
+.hero-carousel {
     position: absolute;
     inset: 0;
     z-index: 2;
-    pointer-events: none;
-}
-
-.fcard {
-    position: absolute;
-    border-radius: 14px;
+    perspective: 1200px;
+    /* High perspective for subtle 3D */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    box-shadow: var(--shadow-card);
-    will-change: transform;
-    transform-style: preserve-3d;
-    transition: box-shadow .3s;
-    pointer-events: auto;
-}
-
-.fcard img {
-    width: 100%;
-    display: block;
     pointer-events: none;
+    /* Let clicks pass through to content */
 }
 
-.fcard-1 {
-    width: clamp(120px, 13vw, 190px);
-    top: 11%;
-    left: 5%;
-    animation: floatA 6s ease-in-out infinite;
+.carousel-scene {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Tilt the whole scene slightly down so we see the ring at an angle */
+    transform: translateY(-5%) rotateX(-12deg);
 }
 
-.fcard-2 {
-    width: clamp(100px, 11vw, 165px);
-    top: 18%;
-    right: 6%;
-    animation: floatB 7s ease-in-out infinite;
+.carousel-ring {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: spinCarousel 24s linear infinite;
 }
 
-.fcard-3 {
-    width: clamp(120px, 13vw, 190px);
-    bottom: 20%;
-    left: 7%;
-    animation: floatC 8s ease-in-out infinite;
-}
-
-.fcard-4 {
-    width: clamp(100px, 11vw, 160px);
-    bottom: 24%;
-    right: 5%;
-    animation: floatA 6.5s ease-in-out infinite reverse;
-}
-
-@keyframes floatA {
-
-    0%,
-    100% {
-        transform: rotate(-8deg) translateY(0)
+@keyframes spinCarousel {
+    from {
+        transform: rotateY(0deg);
     }
 
-    50% {
-        transform: rotate(-6deg) translateY(-18px)
+    to {
+        transform: rotateY(-360deg);
     }
 }
 
-@keyframes floatB {
-
-    0%,
-    100% {
-        transform: rotate(7deg) translateY(0)
-    }
-
-    50% {
-        transform: rotate(5deg) translateY(-22px)
-    }
+.carousel-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(140px, 16vw, 220px);
+    aspect-ratio: 5 / 7;
+    /* Standard card ratio */
+    margin-left: calc(clamp(140px, 16vw, 220px) / -2);
+    margin-top: calc((clamp(140px, 16vw, 220px) * 1.4) / -2);
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    /* The individual cards will be spaced out by Javascript, but we can hardcode for 6 cards: */
 }
 
-@keyframes floatC {
+/* Hardcode offsets for 6 cards (360deg / 6 = 60deg each) */
+.carousel-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(45vw);
+}
 
-    0%,
-    100% {
-        transform: rotate(5deg) translateY(0)
-    }
+.carousel-card:nth-child(2) {
+    transform: rotateY(60deg) translateZ(45vw);
+}
 
-    50% {
-        transform: rotate(7deg) translateY(-14px)
-    }
+.carousel-card:nth-child(3) {
+    transform: rotateY(120deg) translateZ(45vw);
+}
+
+.carousel-card:nth-child(4) {
+    transform: rotateY(180deg) translateZ(45vw);
+}
+
+.carousel-card:nth-child(5) {
+    transform: rotateY(240deg) translateZ(45vw);
+}
+
+.carousel-card:nth-child(6) {
+    transform: rotateY(300deg) translateZ(45vw);
+}
+
+
+/* Card Faces */
+.carousel-front,
+.carousel-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--navy-mid);
+    backface-visibility: hidden;
+    /* This hides the back when rotated */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.carousel-front img,
+.carousel-back img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-back {
+    /* The back face is flipped 180deg by default */
+    transform: rotateY(180deg);
+}
+
+/* Ensure images don't stretch weirdly */
+.carousel-front img {
+    object-fit: contain;
 }
 
 /* ── Hero Content ── */
@@ -432,21 +460,33 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
 
-    .fcard-3,
-    .fcard-4 {
-        display: none;
+    .hero-carousel {
+        perspective: 900px;
+        /* slightly flatter perspective on mobile */
     }
 
-    .fcard-1 {
-        width: 90px;
-        top: 8%;
-        left: 2%;
+    .carousel-card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(55vw);
     }
 
-    .fcard-2 {
-        width: 90px;
-        top: 8%;
-        right: 2%;
+    .carousel-card:nth-child(2) {
+        transform: rotateY(60deg) translateZ(55vw);
+    }
+
+    .carousel-card:nth-child(3) {
+        transform: rotateY(120deg) translateZ(55vw);
+    }
+
+    .carousel-card:nth-child(4) {
+        transform: rotateY(180deg) translateZ(55vw);
+    }
+
+    .carousel-card:nth-child(5) {
+        transform: rotateY(240deg) translateZ(55vw);
+    }
+
+    .carousel-card:nth-child(6) {
+        transform: rotateY(300deg) translateZ(55vw);
     }
 
     .product-card {
