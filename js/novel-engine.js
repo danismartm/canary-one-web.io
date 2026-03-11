@@ -124,25 +124,10 @@ const NovelEngine = (() => {
         if (!textEl) return;
         if (_typeTimer) clearTimeout(_typeTimer);
 
-        _typing = true;
-        textEl.textContent = '';
-        textEl.classList.add('typing');
-
-        const chars = Array.from(text);
-        let i = 0;
-
-        function nextChar() {
-            if (!textEl) return; // guard against page re-renders
-            if (i < chars.length) {
-                textEl.textContent += chars[i++];
-                _typeTimer = setTimeout(nextChar, 10); /* Reduced from 22 for faster typing */
-            } else {
-                textEl.classList.remove('typing');
-                _typing = false;
-                if (onDone) onDone();
-            }
-        }
-        nextChar();
+        _typing = false;
+        textEl.textContent = text;
+        textEl.classList.remove('typing');
+        if (onDone) onDone();
     }
 
     /* ── Render choice buttons ── */
