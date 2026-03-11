@@ -292,25 +292,68 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
     #novel-overlay {
-        padding: 0 12px 32px;
+        padding: 0 12px 24px;
+    }
+
+    .novel-container {
+        gap: 12px;
+        /* Permitir que el contenedor reduzca su tamaño sin desbordar */
+        width: 100%;
+    }
+
+    .guanchito-character {
+        /* Se adapta dinámicamente según el ancho para no romper la pantalla */
+        width: clamp(80px, 20vw, 140px);
+        min-width: 0;
+        margin-bottom: 0;
     }
 
     .novel-dialog {
-        padding: 20px 18px 16px;
+        padding: 16px 14px 12px;
+        border-radius: 20px;
     }
 
     #novel-text {
-        font-size: .95rem;
+        font-size: clamp(0.75rem, 3.5vw, 0.95rem);
+        margin-bottom: 12px;
+        min-height: 2.5em;
+    }
+
+    .novel-choices {
+        gap: 6px;
     }
 
     .novel-choice {
-        font-size: .88rem;
-        padding: 11px 14px;
+        /* Reducir radicalmente paddings y tipografía para que todo encaje en línea */
+        padding: 8px 6px;
+        font-size: clamp(0.6rem, 2.5vw, 0.85rem);
+        gap: 4px;
     }
 
-    .novel-avatar {
-        width: 44px;
-        height: 44px;
-        font-size: 1.4rem;
+    .novel-choice-key {
+        min-width: 18px;
+        height: 18px;
+        font-size: 0.6rem;
+        border-radius: 4px;
+    }
+
+    .novel-choice-icon {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Forzar mayor compactación en móviles muy estrechos sin envolver ni mover */
+    .novel-container {
+        gap: 8px;
+    }
+
+    .novel-dialog {
+        padding: 12px 10px 10px;
+    }
+
+    .novel-choice {
+        padding: 6px 4px;
     }
 }
