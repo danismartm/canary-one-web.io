@@ -13,37 +13,31 @@
     /* space for novel dialog */
 }
 
-/* 1. Vibrant Background */
 .hero-bg {
     position: absolute;
     inset: -60px;
     z-index: 0;
-    /* Sunset gradient */
-    background: linear-gradient(180deg, #e11e00 0%, #ff5e00 45%, #fcd65b 100%);
+    background: radial-gradient(ellipse at 60% 40%, var(--hero-grad-1) 0%, var(--hero-grad-2) 55%, var(--hero-grad-3) 100%);
     will-change: transform;
 }
 
-/* Simulating green hills at the bottom */
 .hero-bg::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: -10vw;
-    right: -10vw;
-    height: 40vh;
-    background:
-        radial-gradient(ellipse at 50% 120%, #7dbb25 0%, #3e881b 70%, transparent 100%),
-        radial-gradient(ellipse at 80% 100%, #61a615 0%, #2f730c 70%, transparent 100%),
-        radial-gradient(ellipse at 20% 100%, #8ac825 0%, #4a9e15 70%, transparent 100%);
-    border-radius: 50% 50% 0 0;
-    z-index: 1;
+    inset: 0;
+    background: url('../assets/card_back.png') center/cover no-repeat;
+    opacity: .04;
+    filter: blur(2px);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(180deg,
+            rgba(var(--navy-rgb), .05) 0%,
+            rgba(var(--navy-rgb), .45) 65%,
+            rgba(var(--navy-rgb), 1) 100%);
 }
 
 /* ── Floating Cards ── */
