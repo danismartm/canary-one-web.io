@@ -232,20 +232,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
 }
 
-.novel-choice-key {
-    min-width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    background: rgba(212, 168, 67, .12);
-    border: 1px solid rgba(212, 168, 67, .3);
-    color: var(--gold);
-    font-size: .8rem;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
 
 .novel-choice-icon {
     font-size: 1.1rem;

@@ -156,7 +156,6 @@ const NovelEngine = (() => {
             btn.className = 'novel-choice';
             btn.style.animationDelay = `${idx * 0.07}s`;
             btn.innerHTML = `
-        <span class="novel-choice-key">${c.key}</span>
         <span class="novel-choice-icon">${c.icon}</span>
         <span>${c.label}</span>
       `;
@@ -187,9 +186,7 @@ const NovelEngine = (() => {
             return;
         }
 
-        const key = e.key.toUpperCase();
-        const match = node.choices.find(c => c.key === key);
-        if (match && !_typing) handleChoice(match);
+        // Removed specific alphabet character handling per user request
     }
 
     function reset() { showNode('root'); }
