@@ -308,9 +308,9 @@
     }
 
     #sos-btn {
-        right: 16px;
-        bottom: 16px;
-        padding: 10px 14px;
-        font-size: .8rem;
+        right: 12px;
+        bottom: 12px;
+        padding: 8px 12px;
+        font-size: .75rem;
     }
 }

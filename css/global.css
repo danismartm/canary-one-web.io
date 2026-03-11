@@ -375,3 +375,18 @@ button {
     color: var(--gold) !important;
     border-color: rgba(212, 168, 67, .3) !important;
 }
+
+/* ── Responsive Global ── */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+}

@@ -145,7 +145,21 @@
 
         @media (max-width:480px) {
             .footer-inner {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px 16px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+                margin-bottom: 8px;
+            }
+
+            .footer-brand p {
+                max-width: 100%;
+            }
+
+            .footer-col {
+                margin-bottom: 12px;
             }
         }
     </style>
