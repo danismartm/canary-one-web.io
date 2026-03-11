@@ -194,17 +194,20 @@
 }
 
 .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    display: inline-block;
+    /* Hugs the text width */
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
     color: #fff;
-    font-weight: 600;
-    max-width: 560px;
-    margin: 0 auto 36px;
-    line-height: 1.6;
-    background: rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 auto 12px;
+    background: rgba(101, 56, 24, 0.85);
+    /* Fondo marrón */
     backdrop-filter: blur(8px);
-    padding: 12px 24px;
+    padding: 6px 16px;
     border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     animation: fadeUp .9s .2s both;
 }
 
