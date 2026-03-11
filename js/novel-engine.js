@@ -115,7 +115,7 @@ const NovelEngine = (() => {
             typeText(node.text, () => renderChoices(node.choices));
         };
 
-        delayed ? setTimeout(doShow, 800) : doShow();
+        delayed ? setTimeout(doShow, 300) : doShow(); /* Reduced from 800 */
     }
 
     /* ── Typewriter effect ── */
@@ -135,7 +135,7 @@ const NovelEngine = (() => {
             if (!textEl) return; // guard against page re-renders
             if (i < chars.length) {
                 textEl.textContent += chars[i++];
-                _typeTimer = setTimeout(nextChar, 22);
+                _typeTimer = setTimeout(nextChar, 10); /* Reduced from 22 for faster typing */
             } else {
                 textEl.classList.remove('typing');
                 _typing = false;
@@ -154,7 +154,7 @@ const NovelEngine = (() => {
         choices.forEach((c, idx) => {
             const btn = document.createElement('button');
             btn.className = 'novel-choice';
-            btn.style.animationDelay = `${idx * 0.07}s`;
+            btn.style.animationDelay = `${idx * 0.03}s`; /* Reduced from 0.07 */
             btn.innerHTML = `
         <span class="novel-choice-icon">${c.icon}</span>
         <span>${c.label}</span>
@@ -164,11 +164,10 @@ const NovelEngine = (() => {
         });
     }
 
-    /* ── Handle a choice ── */
     function handleChoice(choice) {
         resolveRefs();
         if (overlay) overlay.classList.remove('visible');
-        setTimeout(() => choice.action(), 300);
+        setTimeout(() => choice.action(), 150); /* Reduced from 300 */
     }
 
     /* ── Keyboard shortcut handler ── */
