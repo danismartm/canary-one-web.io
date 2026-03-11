@@ -194,14 +194,18 @@
 }
 
 .hero-sub {
-    display: inline-block;
-    /* Hugs the text width */
-    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    position: absolute;
+    top: 100px;
+    /* Above the main title padding */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    font-size: clamp(0.65rem, 1.2vw, 0.85rem);
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin: 0 auto 12px;
     background: rgba(101, 56, 24, 0.85);
     /* Fondo marrón */
     backdrop-filter: blur(8px);
@@ -209,6 +213,7 @@
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     animation: fadeUp .9s .2s both;
+    z-index: 10;
 }
 
 .hero-ctas {
