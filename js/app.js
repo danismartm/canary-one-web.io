@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     Router.init();
     NovelEngine.init();
     Effects.init();
+    CarouselModule.init();
     MapModule.listenForRender();
     FormModule.listenForRender();
 

@@ -3,202 +3,277 @@
 <section class="cartas-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-eyebrow">🃏 El Mazo</span>
+            <span class="section-eyebrow">🃏 Canaryone</span>
             <h2>Las Cartas del Juego</h2>
-            <p>120 cartas distribuidas en 6 series temáticas. Pasa el ratón por encima para descubrir sus secretos.</p>
+            <p>96 cartas, cada una con un significado. Pasa el ratón por encima para descubrir sus secretos.</p>
         </div>
 
         <!-- Filter tabs -->
         <div class="cartas-tabs">
             <button class="cartas-tab active" data-filter="all">Todas</button>
-            <button class="cartas-tab" data-filter="guanche">Guanches</button>
-            <button class="cartas-tab" data-filter="volcan">Volcanes</button>
-            <button class="cartas-tab" data-filter="flora">Flora</button>
-            <button class="cartas-tab" data-filter="fauna">Fauna</button>
-            <button class="cartas-tab" data-filter="gastro">Gastronomía</button>
-            <button class="cartas-tab" data-filter="monumento">Monumentos</button>
+            <button class="cartas-tab" data-filter="islas">Islas</button>
+            <button class="cartas-tab" data-filter="especiales">Especiales</button>
         </div>
 
         <!-- Cards grid -->
         <div class="cartas-grid" id="cartasGrid">
 
-            <!-- Guanche -->
-            <div class="flip-card" data-series="guanche">
-                <div class="flip-card-inner">
-                    <div class="flip-front">
-                        <div class="flip-front-img" style="background-image:url('assets/card_guanche.png')"></div>
-                        <div class="flip-front-overlay"></div>
-                        <div class="flip-front-info">
-                            <span class="flip-series-badge series-guanche">Guanches</span>
-                            <div class="flip-card-name">El Guerrero</div>
-                            <div class="flip-score">⭐ 35 pts</div>
-                        </div>
-                    </div>
-                    <div class="flip-back">
-                        <span class="flip-back-badge series-guanche">Serie: Guanches</span>
-                        <h3>El Guerrero Mencey</h3>
-                        <p>Líder de los guanches de Tenerife. Resistió la conquista castellana durante décadas en la
-                            comarca del Menceyato.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">35</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Raro</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">⚔️</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Volcán -->
-            <div class="flip-card" data-series="volcan">
-                <div class="flip-card-inner">
-                    <div class="flip-front">
-                        <div class="flip-front-img" style="background-image:url('assets/card_teide.png')"></div>
-                        <div class="flip-front-overlay"></div>
-                        <div class="flip-front-info">
-                            <span class="flip-series-badge series-volcan">Volcanes</span>
-                            <div class="flip-card-name">El Teide</div>
-                            <div class="flip-score">⭐ 50 pts</div>
-                        </div>
-                    </div>
-                    <div class="flip-back">
-                        <span class="flip-back-badge series-volcan">Serie: Volcanes</span>
-                        <h3>El Teide – Techo de España</h3>
-                        <p>Con 3.715 m, es el pico más alto de España y el tercer volcán más grande del mundo.
-                            Patrimonio de UNESCO.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">50</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Épico</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">🌋</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Flora -->
-            <div class="flip-card" data-series="flora">
+            <!-- El Hierro -->
+            <div class="flip-card" data-series="islas">
                 <div class="flip-card-inner">
                     <div class="flip-front">
                         <div class="flip-front-img"
-                            style="background-image:url('assets/card_back.png');filter:hue-rotate(100deg) brightness(.9)">
+                            style="background-image:url('assets/hierro.png');background-size:105%;background-position: center;">
                         </div>
                         <div class="flip-front-overlay"></div>
                         <div class="flip-front-info">
-                            <span class="flip-series-badge series-flora">Flora</span>
-                            <div class="flip-card-name">El Drago Milenario</div>
-                            <div class="flip-score">⭐ 40 pts</div>
+                            <div class="flip-card-name" style="color: #fff">El Hierro</div>
                         </div>
                     </div>
                     <div class="flip-back">
-                        <span class="flip-back-badge series-flora">Serie: Flora</span>
-                        <h3>Drago Milenario de Icod</h3>
-                        <p>El árbol más antiguo del archipiélago, con más de 800 años. Su savia roja fue llamada "sangre
-                            de dragón" por los guanches.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">40</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Inusual</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">🌿</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
-                        </div>
+                        <h3>La Sabina del Hierro</h3>
+                        <p>Símbolo de la isla, estos árboles milenarios han sido moldeados por los fuertes vientos
+                            aliseos hasta adquirir sus famosas formas retorcidas.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Fauna -->
-            <div class="flip-card" data-series="fauna">
+            <!-- La Palma -->
+            <div class="flip-card" data-series="islas">
                 <div class="flip-card-inner">
                     <div class="flip-front">
                         <div class="flip-front-img"
-                            style="background-image:url('assets/card_back.png');filter:hue-rotate(200deg) brightness(.85)">
+                            style="background-image:url('assets/la-palma.png');background-size:105%;background-position: center;">
                         </div>
                         <div class="flip-front-overlay"></div>
                         <div class="flip-front-info">
-                            <span class="flip-series-badge series-fauna">Fauna</span>
-                            <div class="flip-card-name">El Lagarto Gigante</div>
-                            <div class="flip-score">⭐ 30 pts</div>
+                            <div class="flip-card-name" style="color: #fff">La Palma</div>
                         </div>
                     </div>
                     <div class="flip-back">
-                        <span class="flip-back-badge series-fauna">Serie: Fauna</span>
-                        <h3>Lagarto Gigante de El Hierro</h3>
-                        <p>Especie endémica redescubierta en 1999. Puede alcanzar 60 cm y es uno de los reptiles más
-                            raros de Europa.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">30</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Común</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">🦎</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
-                        </div>
+                        <h3>Los Enanitos</h3>
+                        <p>La Danza de los Enanos es el acto más emblemático de la Bajada de la Virgen de las Nieves,
+                            donde los danzarines se transforman mágicamente ante el público.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Gastronomía -->
-            <div class="flip-card" data-series="gastro">
+            <!-- La Gomera -->
+            <div class="flip-card" data-series="islas">
                 <div class="flip-card-inner">
                     <div class="flip-front">
                         <div class="flip-front-img"
-                            style="background-image:url('assets/card_back.png');filter:hue-rotate(320deg) brightness(.9)">
+                            style="background-image:url('assets/la-gomera.png');background-size:105%;background-position: center;">
                         </div>
                         <div class="flip-front-overlay"></div>
                         <div class="flip-front-info">
-                            <span class="flip-series-badge series-gastro">Gastronomía</span>
-                            <div class="flip-card-name">El Gofio</div>
-                            <div class="flip-score">⭐ 20 pts</div>
+                            <div class="flip-card-name" style="color: #fff">La Gomera</div>
                         </div>
                     </div>
                     <div class="flip-back">
-                        <span class="flip-back-badge series-gastro">Serie: Gastronomía</span>
-                        <h3>El Gofio Canario</h3>
-                        <p>Harina tostada de cereales y legumbres, base de la dieta guanche durante siglos. Hoy símbolo
-                            culinario de las islas.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">20</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Común</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">🌾</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
-                        </div>
+                        <h3>El Silbo Gomero</h3>
+                        <p>Lenguaje silbado único en el mundo, Patrimonio de la Humanidad, usado durante siglos para
+                            comunicarse a través de los profundos barrancos.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Monumento -->
-            <div class="flip-card" data-series="monumento">
+            <!-- Tenerife -->
+            <div class="flip-card" data-series="islas">
                 <div class="flip-card-inner">
                     <div class="flip-front">
                         <div class="flip-front-img"
-                            style="background-image:url('assets/islands_map.png');background-size:cover"></div>
+                            style="background-image:url('assets/tenerife.png');background-size:105%;background-position: center;">
+                        </div>
                         <div class="flip-front-overlay"></div>
                         <div class="flip-front-info">
-                            <span class="flip-series-badge series-monumento">Monumentos</span>
-                            <div class="flip-card-name">Cueva de los Verdes</div>
-                            <div class="flip-score">⭐ 25 pts</div>
+                            <div class="flip-card-name" style="color: #fff">Tenerife</div>
                         </div>
                     </div>
                     <div class="flip-back">
-                        <span class="flip-back-badge series-monumento">Serie: Monumentos</span>
-                        <h3>Cueva de los Verdes</h3>
-                        <p>Tubo volcánico de 6 km en Lanzarote formado hace 3.000 años. Alberga uno de los lagos
-                            subterráneos más sorprendentes del mundo.</p>
-                        <div class="flip-back-stats">
-                            <div class="flip-stat"><span class="flip-stat-val">25</span><span
-                                    class="flip-stat-lbl">Pts</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">Inusual</span><span
-                                    class="flip-stat-lbl">Rareza</span></div>
-                            <div class="flip-stat"><span class="flip-stat-val">🏛️</span><span
-                                    class="flip-stat-lbl">Tipo</span></div>
+                        <h3>El Teide</h3>
+                        <p>El pico más alto de España domina esta isla, un gigante volcánico que protege el archipiélago
+                            y es el gran símbolo natural de Canarias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gran Canaria -->
+            <div class="flip-card" data-series="islas">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/gran-canaria.png');background-size:105%;background-position: center;">
                         </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">Gran Canaria</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Yacimiento de la Venus</h3>
+                        <p>La Venus de Gran Canaria es una figurilla de terracota que representa la fertilidad, uno de
+                            los hallazgos arqueológicos más importantes del archipiélago.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fuerteventura -->
+            <div class="flip-card" data-series="islas">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/fuerteventura.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">Fuerteventura</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Las Cabras</h3>
+                        <p>El animal más emblemático de la isla majorera, cuya leche da lugar al prestigioso queso
+                            Majorero, el primero de Canarias con denominación de origen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lanzarote -->
+            <div class="flip-card" data-series="islas">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/lanzarote.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">Lanzarote</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>El Diablo de Lanzarote</h3>
+                        <p>La icónica figura diseñada por César Manrique para representar la fuerza volcánica del Parque
+                            Nacional de Timanfaya y el espíritu de la isla.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- La Graciosa -->
+            <div class="flip-card" data-series="islas">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/la-graciosa.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">La Graciosa</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>El Gorro de La Graciosa</h3>
+                        <p>El tradicional sombrero de paja de ala ancha y copa redonda, pieza indispensable de la
+                            vestimenta típica de las mujeres gracioseras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cambio de Color -->
+            <div class="flip-card" data-series="especiales">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/cambio-color.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">Cambio de Color</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Cambio de Color</h3>
+                        <p>Permite elegir la nueva serie en juego. ¡Elige con sabiduría para bloquear a tus rivales y
+                            cambiar el rumbo de la partida!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- +4 con IGIC -->
+            <div class="flip-card" data-series="especiales">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/+4.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">+4 con IGIC</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>+4 con IGIC</h3>
+                        <p>Obliga al siguiente jugador a robar 4 cartas. El impuesto canario aplicado con toda su fuerza
+                            en el tablero de juego.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salto del Pastor -->
+            <div class="flip-card" data-series="especiales">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/salto.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">Salto del Pastor</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Salto del Pastor</h3>
+                        <p>Inspirado en la agilidad de los antiguos pastores, esta carta salta el turno del siguiente
+                            jugador o cambia el sentido del juego.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- +2 con IGIC -->
+            <div class="flip-card" data-series="especiales">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/+2.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">+2 con IGIC</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>+2 con IGIC</h3>
+                        <p>Suma 2 cartas al mazo del siguiente jugador. Un recargo adicional que nadie quiere pagar,
+                            pero que tú puedes imponer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ¡Cámbate! -->
+            <div class="flip-card" data-series="especiales">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <div class="flip-front-img"
+                            style="background-image:url('assets/cambate.png');background-size:105%;background-position: center;">
+                        </div>
+                        <div class="flip-front-overlay"></div>
+                        <div class="flip-front-info">
+                            <div class="flip-card-name" style="color: #fff">¡Cámbate!</div>
+                        </div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>¡Cámbate!</h3>
+                        <p>Una expresión canaria para una carta espectacular. ¡Cámbate la peluca! Bloquea ataques o
+                            realiza una jugada inesperada.</p>
                     </div>
                 </div>
             </div>
@@ -206,12 +281,80 @@
         </div><!-- /cartas-grid -->
 
         <!-- Reglas de juego mini -->
-        <div style="max-width:700px;margin:52px auto 0;text-align:center;">
-            <p style="color:var(--text-dim);font-size:.9rem;line-height:1.7">
-                Cada carta tiene un valor de puntos, una rareza y una categoría. Combina cartas de la misma serie para
-                activar bonificaciones 🌋 o neutraliza las de tu rival con las cartas de Guanche ⚔️.
+        <div
+            style="max-width:800px;margin:64px auto 0;text-align:center;padding:32px;background:rgba(var(--navy-mid-rgb), 0.4);border-radius:24px;border:1px solid var(--card-border);">
+            <h3 style="color:var(--gold);margin-bottom:16px;font-size:1.4rem;">🎴 Reglas del Canaryone</h3>
+            <p style="color:var(--text);font-size:1rem;line-height:1.8;margin-bottom:20px;">
+                El objetivo es quedarte sin cartas. Juega por turnos emparejando una carta de tu mano con la que esté en
+                el mazo por
+                <strong>Isla (color)</strong> o <strong>Símbolo</strong>.
+            </p>
+            <p style="color:var(--text-dim);font-size:0.95rem;line-height:1.8;">
+                Usa las cartas especiales como el <strong>+2 o +4 con IGIC</strong> para penalizar a tus rivales, el
+                <strong>Salto del Pastor</strong> para saltar turnos o el <strong>¡Cámbate!</strong> para jugadas
+                inesperadas.
+                <br><br>
+                <span style="color:var(--teal-light);font-weight:700;font-size:1.1rem;display:block;margin-top:10px;">
+                    🗣️ ¡Y muy importante! Cuando te quede solo UNA carta, grita con fuerza: <span
+                        class="badge-nios">¡ÑOS!</span>
+                </span>
+                Si otro jugador se da cuenta antes que tú de que te queda una carta y no lo has dicho... ¡te tocará
+                robar!
             </p>
         </div>
 
     </div>
 </section>
+
+<script>
+    (function () {
+        const tabs = document.querySelectorAll('.cartas-tab');
+        const cards = document.querySelectorAll('.flip-card');
+
+        // Initial entrance animation
+        setTimeout(() => {
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 50);
+            });
+        }, 100);
+
+        // Filter logic
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.getAttribute('data-filter');
+
+                // Update tab states
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Filter cards
+                cards.forEach(card => {
+                    const series = card.getAttribute('data-series');
+
+                    if (filter === 'all' || series === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, 10);
+                    } else {
+                        card.classList.remove('visible');
+                        setTimeout(() => {
+                            if (!card.classList.contains('visible')) {
+                                card.style.display = 'none';
+                            }
+                        }, 500); // Wait for fade-out transition
+                    }
+                });
+            });
+        });
+
+        // Click to flip (for mobile or click users)
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    })();
+</script>

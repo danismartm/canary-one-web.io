@@ -65,6 +65,16 @@
             margin-bottom: 10px;
         }
 
+        /* Novel active mode: button becomes "close" style */
+        #sos-btn.novel-active {
+            border-color: rgba(20, 184, 184, .5);
+            color: var(--teal-light);
+        }
+
+        #sos-btn.novel-active:hover {
+            border-color: var(--teal-light);
+        }
+
         .footer-logo .logo-c {
             color: var(--gold);
         }
@@ -178,8 +188,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><button id="nav-home">Inicio</button></li>
                 <li><button id="nav-buy">Dónde Comprar</button></li>
-                <li><button id="nav-about">Quiénes Somos</button></li>
-                <li><button id="nav-events">Eventos</button></li>
+                <li><button id="nav-cards">Cartas</button></li>
+                <li><button id="nav-contact">Contacto</button></li>
                 <li class="has-dropdown">
                     <button class="dropdown-toggle" aria-expanded="false">
                         Explorar
@@ -189,12 +199,12 @@
                         </svg>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><button id="nav-cards">Las Cartas</button></li>
+                        <li><button id="nav-about">Quiénes Somos</button></li>
+                        <li><button id="nav-events">Eventos</button></li>
                         <li><button id="nav-research">Investigación</button></li>
                         <li><button id="nav-story">Historia</button></li>
                     </ul>
                 </li>
-                <li><button id="nav-contact">Contacto</button></li>
                 <!-- Botón de Modo Claro / Oscuro -->
                 <li>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar Tema">☀️</button>
@@ -269,9 +279,9 @@
     <!-- ══════════════════════════════
        SOS BUTTON (always visible)
        ══════════════════════════════ -->
-    <button id="sos-btn" aria-label="Abrir menú de navegación clásico">
+    <button id="sos-btn" aria-label="Hablar con el Guanchito">
         <span class="sos-icon">🆘</span>
-        <span class="sos-label">Menú / Socorro</span>
+        <span class="sos-label">🆘 Socorro / Guanchito</span>
     </button>
 
     <!-- ══════════════════════════════
@@ -285,6 +295,7 @@
     <script src="js/router.js?v=3"></script>
     <script src="js/novel-engine.js?v=3"></script>
     <script src="js/effects.js?v=3"></script>
+    <script src="js/carousel.js?v=3"></script>
     <script src="js/map.js?v=3"></script>
     <script src="js/form.js?v=3"></script>
     <script src="js/app.js?v=3"></script>

@@ -5,7 +5,7 @@
 
 const Router = (() => {
     /* ── State ── */
-    let _mode = 'novel';   // 'novel' | 'classic'
+    let _mode = 'classic';   // 'classic' is now the default
     let _current = 'landing'; // current page id
 
     /* ── DOM refs ── */
@@ -40,8 +40,14 @@ const Router = (() => {
         sosBtn = document.getElementById('sos-btn');
         pageContent = document.getElementById('page-content');
 
+        // On start, if classic mode, show navbar
+        if (_mode === 'classic') {
+            navEl.classList.add('visible');
+            document.body.classList.add('classic');
+        }
+
         sosBtn.addEventListener('click', () => {
-            _mode === 'novel' ? enableClassic() : enableNovel();
+            _mode === 'classic' ? enableNovel() : enableClassic();
         });
     }
 
@@ -75,14 +81,14 @@ const Router = (() => {
         window.scrollTo({ top: 0, behavior: opts.smooth ? 'smooth' : 'instant' });
     }
 
-    /* ── Classic mode (SOS triggered) ── */
+    /* ── Classic mode (Navbar mode - Default) ── */
     async function enableClassic() {
         _mode = 'classic';
         document.body.classList.add('classic');
 
         navEl.classList.add('visible');
-        sosBtn.classList.add('classic-mode');
-        sosBtn.querySelector('.sos-label').textContent = '× Salir del mapa';
+        sosBtn.classList.remove('novel-active');
+        sosBtn.querySelector('.sos-label').textContent = '🆘 Socorro / Guanchito';
 
         // Re-render current page without the dialog
         pageContent.classList.add('page-exit');
@@ -99,14 +105,15 @@ const Router = (() => {
         document.dispatchEvent(new CustomEvent('modeChanged', { detail: { mode: 'classic' } }));
     }
 
-    /* ── Novel mode (restore) ── */
+    /* ── Novel mode (Visual Novel / Guanchito) ── */
     async function enableNovel() {
         _mode = 'novel';
         document.body.classList.remove('classic');
 
+        // Hide navbar in novel mode
         navEl.classList.remove('visible');
-        sosBtn.classList.remove('classic-mode');
-        sosBtn.querySelector('.sos-label').textContent = 'Menú / Socorro';
+        sosBtn.classList.add('novel-active');
+        sosBtn.querySelector('.sos-label').textContent = '❌ Cerrar Ayuda';
 
         // Re-render current page with dialog re-injected
         await go(_current);

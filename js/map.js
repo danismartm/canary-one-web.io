@@ -14,9 +14,6 @@ const MapModule = (() => {
         { name: 'TEA Tenerife Espacio de las Artes', lat: 28.4651, lng: -16.2505, island: 'Tenerife', type: 'museum', address: 'Av. de San Sebastián 10, S/C de Tenerife' },
         { name: 'Canarias Shop Aeropuerto Norte', lat: 28.4827, lng: -16.3416, island: 'Tenerife', type: 'store', address: 'Aeropuerto de Tenerife Norte, San Cristóbal de La Laguna' },
 
-        /* 
-        -- PUNTOS DE VENTA FUTUROS (DESCOMENTAR CUANDO ESTÉN ACTIVOS) --
-        
         // Gran Canaria
         { name: 'Librería del Cabildo', lat: 28.1004, lng: -15.4134, island: 'Gran Canaria', type: 'books', address: 'C/ Triana 34, Las Palmas de G.C.' },
         { name: 'Museo Canario', lat: 28.0997, lng: -15.4137, island: 'Gran Canaria', type: 'museum', address: 'C/ Dr. Verneau 2, Las Palmas de G.C.' },
@@ -33,8 +30,7 @@ const MapModule = (() => {
         // La Gomera
         { name: 'Artesanía La Gomera', lat: 28.0916, lng: -17.1097, island: 'La Gomera', type: 'store', address: 'San Sebastián de La Gomera' },
         // El Hierro
-        { name: 'Tienda El Hierro Canario', lat: 27.7434, lng: -18.0063, island: 'El Hierro', type: 'store', address: 'Valverde, El Hierro' },
-        */
+        { name: 'Tienda El Hierro Canario', lat: 27.7434, lng: -18.0063, island: 'El Hierro', type: 'store', address: 'Valverde, El Hierro' }
     ];
 
     const ISLAND_VIEWS = {

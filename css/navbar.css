@@ -226,12 +226,12 @@
 }
 
 /* Classic mode: button becomes "close" style */
-#sos-btn.classic-mode {
+#sos-btn.novel-active {
     border-color: rgba(20, 184, 184, .5);
     color: var(--teal-light);
 }
 
-#sos-btn.classic-mode:hover {
+#sos-btn.novel-active:hover {
     border-color: var(--teal-light);
     box-shadow: 0 6px 28px rgba(20, 184, 184, .2);
 }

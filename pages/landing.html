@@ -1,98 +1,56 @@
-<!-- pages/landing.html – Static Landing Page fragment -->
+<!-- pages/landing.html – 3D Carousel Landing Page -->
 
-<!-- ── Hero ── -->
-<section class="hero" id="inicio">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-overlay"></div>
+<section class="hero-carousel" id="landing-hero">
+    <div class="carousel-scene">
+        <div class="carousel-pivot" id="carouselPivot">
+            <!-- 8 Islands -->
+            <div class="carousel-card" style="--i:0"><img src="assets/hierro.png" alt="El Hierro"></div>
+            <div class="carousel-card" style="--i:1"><img src="assets/la-palma.png" alt="La Palma"></div>
+            <div class="carousel-card" style="--i:2"><img src="assets/la-gomera.png" alt="La Gomera"></div>
+            <div class="carousel-card" style="--i:3"><img src="assets/tenerife.png" alt="Tenerife"></div>
+            <div class="carousel-card" style="--i:4"><img src="assets/gran-canaria.png" alt="Gran Canaria"></div>
+            <div class="carousel-card" style="--i:5"><img src="assets/fuerteventura.png" alt="Fuerteventura"></div>
+            <div class="carousel-card" style="--i:6"><img src="assets/lanzarote.png" alt="Lanzarote"></div>
+            <div class="carousel-card" style="--i:7"><img src="assets/la-graciosa.png" alt="La Graciosa"></div>
 
-    <!-- Floating UNO-style Elements -->
-    <div class="floating-cards">
-        <div class="fcard fcard-1"><img src="assets/card_guanche.png" alt="" /></div>
-        <div class="fcard fcard-2"><img src="assets/card_teide.png" alt="" /></div>
-        <div class="fcard fcard-3"><img src="assets/card_back.png" style="filter: hue-rotate(60deg)" alt="" /></div>
-        <div class="fcard fcard-4"><img src="assets/card_back.png" style="filter: hue-rotate(250deg)" alt="" /></div>
+            <!-- 5 Special Cards -->
+            <div class="carousel-card" style="--i:8"><img src="assets/cambio-color.png" alt="Cambio de Color"></div>
+            <div class="carousel-card" style="--i:9"><img src="assets/+4.png" alt="+4 con IGIC"></div>
+            <div class="carousel-card" style="--i:10"><img src="assets/salto.png" alt="Salto del Pastor"></div>
+            <div class="carousel-card" style="--i:11"><img src="assets/+2.png" alt="+2 con IGIC"></div>
+            <div class="carousel-card" style="--i:12"><img src="assets/cambate.png" alt="¡Cámbate!"></div>
+        </div>
     </div>
 
-    <!-- Hero Character (Replacing the chest) -->
-    <img src="assets/guanchito.png" class="hero-guanchito" alt="Guanchito" />
-
-    <div class="hero-content">
-        <!-- The big UNO-style pop title -->
-        <p class="hero-sub">
-            El juego de Canarias
-        </p>
+    <div class="hero-carousel-content">
         <h1 class="hero-pop-title">CANARYONE</h1>
         <div class="hero-ctas">
             <button class="btn-primary" onclick="Router.go('donde-comprar')">🛒 Dónde Comprar</button>
-            <button class="btn-ghost" onclick="Router.go('quienes-somos')">Más información ↓</button>
+            <button class="btn-ghost" onclick="Router.go('cartas')">Explorar Cartas</button>
         </div>
-    </div>
-
-    <!-- Product card (price + CTA) -->
-    <div class="product-section">
-        <div class="product-card">
-            <div class="product-imgs">
-                <img src="assets/card_guanche.png" alt="Carta del juego" />
-                <img src="assets/card_teide.png" alt="Otra carta del juego" />
-            </div>
-            <div class="product-info">
-                <h3>CANARYONE – Edición 2026</h3>
-                <p class="product-sub">120 cartas · Ilustraciones originales · Para 2–6 jugadores · +8 años</p>
-                <div class="product-tags">
-                    <span class="product-tag highlight">🎓 Educativo</span>
-                    <span class="product-tag">♻️ Producción local</span>
-                    <span class="product-tag">🏆 Sin obsolescencia</span>
-                </div>
-            </div>
-            <div class="product-buy">
-                <div>
-                    <div class="product-price">24,90 €</div>
-                    <div class="product-price-note">IVA incluido · Envío gratis +30€</div>
-                </div>
-                <button class="btn-primary" onclick="Router.go('donde-comprar')">Comprar Ahora</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="hero-scroll-hint">
-        <span>Desplázate para descubrir más</span>
-        <div class="scroll-arrow"></div>
     </div>
 </section>
 
-<!-- ── Events Teaser ── -->
-<section class="events-teaser">
-    <div class="evtease-head">
-        <h2>Próximos Eventos</h2>
-        <button class="btn-outline" onclick="Router.go('eventos')">Ver calendario completo</button>
-    </div>
-    <div class="evtease-strip">
-        <div class="evtease-card" data-delay="0">
-            <div class="evc-date"><span class="evc-day">15</span><span class="evc-month">MAR</span></div>
-            <div class="evc-info">
-                <h3>Demo en Librería Canarim</h3>
-                <p>📍 Las Palmas de Gran Canaria</p>
-                <p>🕐 11:00 – 14:00 h</p>
-            </div>
-            <div class="evc-badge free">Gratis</div>
+<!-- Additional Landing Section (Brief) -->
+<section class="landing-brief-sec">
+    <div class="container grid-2">
+        <div class="brief-info anim-fade-in">
+            <span class="section-eyebrow">Rescata la historia</span>
+            <h2>Un viaje por el archipiélago</h2>
+            <p>
+                Canaryone no es solo un juego de cartas, es una ventana a nuestro patrimonio.
+                Descubre los volcanes, las tradiciones y la fauna de las islas mientras compites por ser el primero en
+                vaciar tu mano.
+            </p>
+            <ul class="brief-list">
+                <li>🎨 <strong>Arte canario:</strong> Cada carta es una pieza de ilustración única.</li>
+                <li>🧬 <strong>Educativo:</strong> Aprende sobre el patrimonio sin darte cuenta.</li>
+                <li>⚙️ <strong>Mecánica familiar:</strong> Fácil de aprender, imposible de dejar de jugar.</li>
+            </ul>
         </div>
-        <div class="evtease-card" data-delay="100">
-            <div class="evc-date"><span class="evc-day">22</span><span class="evc-month">MAR</span></div>
-            <div class="evc-info">
-                <h3>Taller Escolar CEIP Las Palmas</h3>
-                <p>📍 Santa Cruz de Tenerife</p>
-                <p>🕐 09:30 – 12:00 h</p>
-            </div>
-            <div class="evc-badge school">Colegios</div>
-        </div>
-        <div class="evtease-card" data-delay="200">
-            <div class="evc-date"><span class="evc-day">05</span><span class="evc-month">ABR</span></div>
-            <div class="evc-info">
-                <h3>Feria Artesanía Canaria</h3>
-                <p>📍 Arrecife, Lanzarote</p>
-                <p>🕐 10:00 – 20:00 h</p>
-            </div>
-            <div class="evc-badge fair">Feria</div>
+        <div class="brief-image anim-scale-in">
+            <img src="assets/event_photo.png" alt="Evento Canaryone"
+                style="border-radius:24px; box-shadow: var(--shadow-card);">
         </div>
     </div>
 </section>
